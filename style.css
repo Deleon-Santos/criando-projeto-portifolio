@@ -1,0 +1,379 @@
+
+
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+    --branco: rgb(226, 226, 227);
+    --sinza: rgb(28, 46, 46);
+    --azul: rgb(34, 158, 158);
+
+    --font-family-main: 'Montserrat', sans-serif;
+}
+
+/* Estilos iniciais para o menu hambúrguer */
+.cabeca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-image: var(--azul);
+    
+    margin: auto; /* Centraliza o cabeçalho na página */
+   
+    overflow: hidden; /* Oculta qualquer conteúdo transbordante */
+    position: relative; /* Para efeitos de animação */
+}
+
+.cabeca__menu-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.cabeca__menu-hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Usar branco para contraste com o fundo azul */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Oculta o menu de navegação por padrão */
+.cabeca__navegacao {
+    display: flex;
+    margin: auto;
+    
+    max-width: 800px;
+}
+
+.cabeca__navegacao ul {
+    display: flex;
+    height: 50px;
+    gap: 60px;
+    align-items: center;
+    padding: 0;
+    list-style: none; /* Remove bullets da lista */
+}
+
+.cabeca__navegacao ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px; /* Adiciona espaçamento para tornar clicável */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adiciona transição suave */
+}
+
+/* Estilos para o hover e clique */
+.cabeca__navegacao ul li a:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+.cabeca__navegacao ul li a:active {
+    background-color: #003f7f; /* Azul ainda mais escuro no clique */
+    color: #ddd; /* Cor do texto um pouco mais clara */
+    transform: scale(0.95); /* Efeito de clique (reduz tamanho levemente) */
+}
+
+
+
+/* Fundo preto para todas as divs */
+.home__sassao{
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 50px;
+}
+.home__informacao{
+  width : 500px;
+  
+
+}
+.home__texto{
+    font-weight: lighter;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    align-items: center;
+
+}
+.home__texto strong{
+    color: #1e90ff;
+}
+
+.content{
+    align-items: center;
+    font-size:xx-large;
+    font-size: 2rem;
+}
+div {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco para contraste */
+}
+
+/* Estilo inicial para as seções que devem aparecer ao rolar */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estilo para as seções após aparecerem */
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo adicional para o body e outros elementos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+}
+
+h1, h2, h3, p {
+    color: #fff; /* Garantindo que todos os textos sejam brancos */
+}
+
+.cabeca, .footer {
+    background-color: #333; /* Fundo levemente mais claro para o cabeçalho e rodapé */
+}
+
+a {
+    color: #1e90ff; /* Link azul para melhor visibilidade */
+}
+
+a:hover {
+    color: #ff6347; /* Link vermelho claro no hover */
+}
+
+.projects {
+    padding: 5rem 0;
+    text-align: center;
+    display: flex;
+    
+}
+
+.about {
+    background-color: var(--sinza);
+    padding: 5rem 0px;
+    
+}
+
+.about h2 {
+    color: var(--branco);
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight:100;
+    font-size: 2rem;
+}
+
+.about div {
+    background-color: var(--branco);
+    width: 30rem;
+    margin: 0 auto;
+    border: 2px solid var(--azul);
+    border-radius: 15px;
+    padding: 1.5rem 0.9rem 0;
+    color: #000;
+    
+    
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.projects__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.display--none {
+    display: none;
+}
+
+.project {
+    background-color: var(--azul);
+    width: 30rem;
+    border-radius: 5px;
+}
+.projects  {
+    
+    color: var(--branco);
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight:100;
+    font-size: 2rem;
+}
+    
+.projects div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    
+    padding: 1.5rem 1.5rem 3rem;
+
+    color: var(--branco);
+    font-size: 1.8rem;
+}
+
+.project__technologies img {
+    width: 40px;
+    margin: 0 15px;
+}
+
+.project__link {
+    border-radius: 15px;
+    padding: 1rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    transition: .5s;
+}
+
+.project__link:hover {
+    transform: scale(1.05);
+}
+
+.project__open-deploy-link {
+    background-color: var(--branco);
+    color: var(--azul);
+}
+
+
+.project__open-repository-link {
+    border: 1px solid var(--branco);
+    color: var(--branco);
+}
+
+.projects button {
+    background-color: transparent;
+    margin-top: 3rem;
+    border: none;
+    color: var(--sinza);
+    font-size: 1.6rem;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.projects button:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.footer {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.footer__social-medias {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer__social-medias img {
+    width: 40px;
+    margin: 3rem 15px;
+    transition: .5s;
+}
+
+.footer__social-medias img:hover {
+    transform: scale(1.1);
+}
+
+.footer__social-medias span {
+    display: none;
+}
+
+.footer__container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer__container__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    width: fit-content;
+    margin: 2rem auto 3rem;
+    
+    text-align: left;
+}
+
+.footer__container__wrapper a {
+    color: var(--sinza);
+}
+
+.footer hr {
+    width: 80%;
+}
+
+.footer__copy {
+    margin-top: 4rem;
+}
+
+.footer__copy__p--none {
+    display: none;
+}
+
+
+/* Estilos para telas menores */
+
+@media screen and (max-width: 768px) {
+    .cabeca__menu-hamburger {
+        display: flex;
+    }
+
+    .cabeca__navegacao {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Altere conforme necessário */
+        right: 20px; /* Altere conforme necessário */
+        background-color: #333;
+        border-radius: 8px;
+        width: 200px;
+    }
+
+    .cabeca__navegacao ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .cabeca__navegacao ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .cabeca__navegacao ul li a {
+        color: #fff;
+        padding: 10px;
+        display: block;
+    }
+
+    /* Efeito de transição quando o menu é aberto */
+    .cabeca__navegacao.open {
+        display: flex;
+    }
+}
