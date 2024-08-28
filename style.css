@@ -40,13 +40,14 @@ body {
 
 /* Estilos iniciais para o menu hambúrguer */
 .cabeca {
-    background-color: #333;
+    
+    
     font-family: var(--font_main);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    background-color: blue; /* Define a cor de fundo Cor-azul */
+   
     margin: auto; /* Centraliza o cabeçalho na página */
     overflow: hidden; /* Oculta qualquer conteúdo transbordante */
     position: fixed; /* Fixa o cabeçalho no topo da página */
@@ -59,6 +60,8 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    margin-left: 60px;
+    background-color: #333;
 }
 
 .cabeca__menu-hamburger div {
@@ -86,7 +89,7 @@ body {
     display: flex;
     margin: auto;
     
-    max-width: 800px;
+    
 }
 
 .cabeca__navegacao ul {
@@ -129,7 +132,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    max-width: 900px;
+    width: 600px;
     margin: auto;
     text-align: center;
     
@@ -141,7 +144,7 @@ body {
 .home__texto{
     font-weight: lighter;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     
 
     align-items: center;
@@ -173,7 +176,9 @@ body {
     text-align: center;
     height: 50px;
 }
-
+a {
+    color: #1e90ff; /* Link Cor-azul para melhor visibilidade */
+}
 li {
     text-decoration: none;
     list-style: none;
@@ -186,7 +191,18 @@ div {
     background-color: #000; /* Fundo preto */
     
 }
+a:hover {
+    color: #ff6347; /* Link vermelho claro no hover */
+}
 
+.titulo{
+    color: var(--branco);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+    font-weight:100;
+    font-size: 2rem;
+}
 /* Estilo inicial para as seções que devem aparecer ao rolar */
 .section-hidden {
     opacity: 0;
@@ -210,59 +226,80 @@ div {
     background-color: #333; /* Fundo levemente mais claro para o cabeçalho e rodapé */
 }
 
-a {
-    color: #1e90ff; /* Link Cor-azul para melhor visibilidade */
-}
 
-a:hover {
-    color: #ff6347; /* Link vermelho claro no hover */
-}
+
 
 
 .about {
     background-color: var(--branco);
-    height: 700px;
+    display: flex;
+    flex-direction: column;
     
-   
+    margin: auto;
     
 }
 
-.titulo{
-    color: var(--branco);
-    margin-bottom: 40px;
-    text-align: center;
-    font-weight:100;
-    font-size: 2rem;
-}
 
-.about .sobre {
-    height: 350px;
+
+.sobre {
+    
     background-color: antiquewhite;
     margin:auto;
     border: 2px solid var(--Cor-azul);
-    
-    padding: 4rem 12rem ;
+    display:flex;
+    flex-direction:column;
+    width: 100%;
     color: #000;
-    gap: 40px;
+    border:solid ;
     
-    align-items:self-start ;
+    align-items: center;
+    justify-content: center;
+    
+    
     
     
 }
-.sobre div{
+.sobre_0{
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    max-width: 948px;
+    margin: auto;
+    margin: 4.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.sobre_1{
     display: flex;
     background-color: antiquewhite;
     margin:auto;
-    gap: 40px;
-    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+   
+    gap: 30px;
+    
+    
+    
+}
+.sobre_1 div{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home__figura{
     border-radius: 15px;
+    height: 250px;
+    display: flex;
     
     
 }
+.home__figura img{
+    border-radius: 15px;
+}
 .about p {
     
+    margin-bottom: 3rem;
     color: #000;
 }
 .projects  {
@@ -280,7 +317,7 @@ a:hover {
     grid-template-columns: repeat(2, 1fr); /* Define duas colunas */
     gap: 2px;
     justify-items: center; /* Centraliza os itens em cada coluna */
-    
+    padding: 2rem 5rem;
 }
 
 .display--none {
@@ -358,19 +395,27 @@ a:hover {
 
 
 .skills  {
-    margin-top: 5rem;
-    height: 300px;
+    margin: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 } 
 .skills .hability {
     padding-top:  4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:30px;
+    
     font-size: 5rem;
     color: var(--Cor-azul);
+    
 }
-
+.skills .hability div{
+    padding: 10px;
+    margin:auto ;
+}
 
 .footer {
     padding-top: 4rem;
@@ -397,18 +442,13 @@ a:hover {
 
 @media screen and (max-width: 548px) {
     .cabeca__menu-hamburger {
-        display: flex;
+        display: blo;
     }
 
     .cabeca__navegacao {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Altere conforme necessário */
-        right: 20px; /* Altere conforme necessário */
-        background-color: #333;
-        border-radius: 8px;
-        width: 200px;
+        
+       
     }
 
     .cabeca__navegacao ul {
@@ -429,6 +469,63 @@ a:hover {
 
     /* Efeito de transição quando o menu é aberto */
     .cabeca__navegacao.open {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabeca__menu-hamburger {
         display: flex;
+    }
+    .cabeca__navegacao {
+        display: none;
+    }
+    .cabeca__navegacao.open {
+        display: block;
+        flex-direction: column;
+        background-color: blue;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+    .projects__list {
+        display: flex ;/* Mude de flex para grid */
+        
+        flex-direction: column;
+        align-items: center;
+        
+        padding: 2rem 5rem;
+    }
+    .project{
+        width: 100%;
+        
+    }
+    .sobre_1{
+        display: flex;
+        background-color: antiquewhite;
+        margin:auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .home__figura img{
+        border-radius: 15px;
+        height: 250px;
+        display: flex;
+    }
+    .sobre div{
+        text-align: justify;
+    }
+    .skills .hability {
+        display: grid; /* Mude de flex para grid */
+        grid-template-columns: repeat(3, 1fr); /* Define duas colunas */
+        gap: 2px;
+        justify-items: center; /* Centraliza os itens em cada coluna */
+        padding: 2rem 5rem;
+        
+        
+        color: var(--Cor-azul);
+        
     }
 }

@@ -12,12 +12,11 @@
 
 <body>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" /><!--Link para a utilização de icone de biblioteca externa-->
+    
     <main class="main"id="home">
         <header class="cabeca"id="home">
             <div class="cabeca__menu-hamburger" id="menu-hamburger">
@@ -25,9 +24,9 @@
                 <div class="line-2"></div>
                 <div class="line-3"></div>
             </div>
-        <div class="logo">
-            <p id="ds">DS</p>
-        </div>
+            <div class="logo">
+                <p id="ds">DS</p>
+            </div>
             <nav class="cabeca__navegacao" id="navegacao">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -83,26 +82,28 @@
             <h2 class="titulo">Sobre mim</h2>
             
             <div class="sobre">
-                <div>
-                    <img class="home__figura" src="imagemgithubg.jpg" alt="imagem de Deleon">
-                    <p>
-                         A partir daqui podem me chamar de Leon! sou casado tenho 1 filho, sou um homem de familia e prioriza o ambiente familiar com foco nas pessoas do
-                         meu convívio pessoal. <br><br>
+                <div class="sobre_0">
+                    <div class="sobre_1">
+                        <div class="home__figura"><img  src="imagemgithubg.jpg" alt="imagem de Deleon"></div>
+                        <div>
+                            <p>
+                                 A partir daqui podem me chamar de Leon! sou casado tenho 1 filho, sou um homem de familia e prioriza o ambiente familiar com foco nas pessoas do
+                                 meu convívio pessoal. <br><br>
                     
                     
-                        Eu Gosto de viagens e passeios com familiares e amigos, gosto de compartilhar conquistas e emoções que dão significado a vida.
-                        Encaro os desafios com otimismo mantendo uma rotina equilibrada entre responsabilidade, trabalho e lazer. <br>
-                    </p>
+                                Eu Gosto de viagens e passeios com familiares e amigos, gosto de compartilhar conquistas e emoções que dão significado a vida.
+                                Encaro os desafios com otimismo mantendo uma rotina equilibrada entre responsabilidade, trabalho e lazer. <br>
+                            </p>
+                        </div>
+                    </div>
+                        <p>
+                            Venho do varejo onde atuel por 15 anos e nessa epoca passei no meu primeiro vestibular para UfsCar par ao curso de Basharel em Sistemas de Informação.
+                            Por questões diversas o meu sonho precisou ser adiado mas a paixao por tecnologia e como eles eram aplicadas, e o impacto que eles causam nos processos permanecerem .
+                        <br><br>
+                            Depois de muitos anos e de ter uma experiencia consolidade decidir investir em uma nova carreira como programado desenvolvedor. Encontrei em Analise e Desenvolvimento de Sistemas
+                            a grade de estudo ideal para ser um Desenvolvedor. <br>
+                        </p>
                 </div>
-            
-                    <p>
-                        Venho do varejo onde atuel por 15 anos e nessa epoca passei no meu primeiro vestibular para UfsCar par ao curso de Basharel em Sistemas de Informação.
-                        Por questões diversas o meu sonho precisou ser adiado mas a paixao por tecnologia e como eles eram aplicadas, e o impacto que eles causam nos processos permanecerem . 
-                    <br><br>
-
-                        Depois de muitos anos e de ter uma experiencia consolidade decidir investir em uma nova carreira como programado desenvolvedor. Encontrei em Analise e Desenvolvimento de Sistemas
-                        a grade de estudo ideal para ser um Desenvolvedor. <br>
-                    </p>
             </div>
 
             
@@ -199,14 +200,14 @@
             <h2 class="titulo">Habilidades</h2>
             
                 <div class='hability'>
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-js"></i>
-                    <i class="fa-brands fa-python"></i>
-                    <i class="fa-solid fa-database"></i>
-                    <i class="fa-brands fa-git-alt"></i>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-figma"></i>
+                    <div><i class="fa-brands fa-html5"></i></div>
+                    <div><i class="fa-brands fa-css3-alt"></i></div>
+                    <div><i class="fa-brands fa-js"></i></div>
+                    <div><i class="fa-brands fa-python"></i></div>
+                    <div><i class="fa-solid fa-database"></i></div>
+                    <div><i class="fa-brands fa-git-alt"></i></div>
+                    <div><i class="fa-brands fa-github"></i></div>
+                    <div><i class="fa-brands fa-figma"></i></div>
                 </div>
                 
                 
@@ -239,55 +240,50 @@
             <p>&copy 2024 - Deleon Santos</p>
         </div>
 
-        <script>
-            
         
-            
-            document.querySelector(".projects__btn").addEventListener("click", function() {
-                // Seleciona todos os elementos <li> que possuem o estilo display: none
-                const hiddenProjects = document.querySelectorAll(".projects__list li[style*='display: none']");
-                
-                // Itera por cada elemento escondido e altera o estilo para display: block
-                hiddenProjects.forEach(function(project) {
-                project.style.display = "block";
-                });
-
-                // Opcional: Esconde o botão após mostrar todos os projetos
-                this.style.display = "none";
-            });
-
-
-            document.addEventListener('DOMContentLoaded', function () {
-                const sections = document.querySelectorAll('.home, .about, .projects, .skills');
-        
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('section-visible');
-                        } else {
-                            entry.target.classList.remove('section-visible');
-                        }
-                    });
-                });
-        
-                sections.forEach(section => {
-                    section.classList.add('section-hidden');
-                    observer.observe(section);
-                });
-            });
-            document.addEventListener('DOMContentLoaded', function() {
-                const hamburger = document.getElementById('menu-hamburger');
-                const navigation = document.getElementById('navegacao');
-
-                hamburger.addEventListener('click', function() {
-                    navigation.classList.toggle('open');
-                });
-            });
-        </script>
         
     </footer>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function () {
+        // Mostrar projetos ocultos
+        document.querySelector(".projects__btn").addEventListener("click", function () {
+            const hiddenProjects = document.querySelectorAll(".projects__list li[style*='display: none']");
+            hiddenProjects.forEach(function (project) {
+                project.style.display = "block";
+            });
+            this.style.display = "none";
+        });
 
-    <script type="module" src="./src/js/index.js"></script>
+        // Intersection Observer para animações de seção
+        const sections = document.querySelectorAll('.home, .about, .projects, .skills');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                } else {
+                    entry.target.classList.remove('section-visible');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            section.classList.add('section-hidden');
+            observer.observe(section);
+        });
+
+        // Menu hambúrguer
+        const hamburger = document.getElementById('menu-hamburger');
+        const navigation = document.getElementById('navegacao');
+
+        hamburger.addEventListener('click', function () {
+            navigation.classList.toggle('open');
+        });
+    });
+
+
+</script> 
+
  
 </body>
 </html>
