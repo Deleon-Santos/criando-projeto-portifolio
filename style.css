@@ -37,6 +37,8 @@ body {
     background-color:var(--Cor-body); /* Fundo preto */
     color: var(--Cor-destaque); /* Texto branco */
 }
+ 
+    
 
 /* Estilos iniciais para o menu hambúrguer */
 .cabeca {
@@ -72,12 +74,12 @@ body {
     transition: all 0.3s ease;
 }
 .logo{
-    margin: auto;
-    padding: 10px 10px;
+    margin: 0 auto;
+    
     background-color: var(--cor3);
     border-radius:  25rem;
-    text-align: center; 
-    right: 5 rem;    
+     
+       
 }
 #ds{
     font-family: var(--font-logo);
@@ -88,6 +90,9 @@ body {
 .cabeca__navegacao {
     display: flex;
     margin: auto;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
     
     
 }
@@ -96,18 +101,19 @@ body {
     font-family: var(--font_main);
     display: flex;
     height: 50px;
-    gap: 30px;
+    margin: auto;
     align-items: center;
-    padding: 0;
+    justify-content: center;
     list-style: none; /* Remove bullets da lista */
 }
 
 .cabeca__navegacao ul li a {
     color:var(--Cor-suave);
     text-decoration: none;
-    padding: 10px 15px; /* Adiciona espaçamento para tornar clicável */
+    padding: 10px 20px; /* Adiciona espaçamento para tornar clicável */
     transition: background-color 0.3s ease, color 0.3s ease; 
     border-color: aqua;
+
 }
 
 /* Estilos para o hover e clique */
@@ -152,7 +158,7 @@ body {
 }
 .home__texto strong{
     color: var(--Cor-azul);
-    font-weight: 900;
+    font-weight: 940px;
 }
 
 .content p{
@@ -442,7 +448,7 @@ a:hover {
 
 @media screen and (max-width: 548px) {
     .cabeca__menu-hamburger {
-        display: blo;
+        display: block;
     }
 
     .cabeca__navegacao {
@@ -471,6 +477,67 @@ a:hover {
     .cabeca__navegacao.open {
         display: block;
     }
+    .home{
+        font-family:var(--font_main) ;
+        
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .home__informacao{
+        color: var(--Cor-suave);
+        margin-top: 20%;
+    }
+    .home__texto{
+        font-weight: lighter;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        
+    
+        align-items: center;
+        color:var(--Cor-suave)
+    }
+    .home__texto strong{
+        color: var(--Cor-azul);
+        font-weight: 900;
+    }
+    
+    .content p{
+        color:var(--Cor-suave);
+        align-items: center;
+        font-weight: 100;
+        font-size: 1rem;
+        margin-bottom: 40px;
+    
+    }
+    .projects__list {
+        display: flex; /* Mude de flex para grid */
+        margin: auto;
+        justify-content: center;
+        justify-items: center; /* Centraliza os itens em cada coluna */
+        padding: 2rem 5rem;
+    }
+    .footer {
+        padding-top: 4rem;
+        text-align: center;
+        margin:   auto;
+        width: 100%;
+    }
+    
+    .footer__social-medias {
+        display: flex;
+        justify-content: center;
+        margin:  auto;
+        padding: 30px;
+        
+        font-size: 3rem;
+        
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -485,8 +552,8 @@ a:hover {
         flex-direction: column;
         background-color: blue;
         position: absolute;
-        top: 100%;
-        width: 100%;
+       -
+        
     }
     .projects__list {
         display: flex ;/* Mude de flex para grid */
@@ -494,7 +561,7 @@ a:hover {
         flex-direction: column;
         align-items: center;
         
-        padding: 2rem 5rem;
+       
     }
     .project{
         width: 100%;
@@ -507,7 +574,8 @@ a:hover {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 30px;
+        width: 100%;
+
     }
     .home__figura img{
         border-radius: 15px;
