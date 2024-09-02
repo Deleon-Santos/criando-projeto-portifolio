@@ -67,8 +67,8 @@ body {
 }
 
 .cabeca__menu-hamburger div {
-    width: 30px;
-    height: 3px;
+    width: 20px;
+    height: 1px;
     background-color: #fff; /* Usar branco para contraste com o fundo Cor-azul */
     margin: 5px 0;
     transition: all 0.3s ease;
@@ -100,7 +100,7 @@ body {
 .cabeca__navegacao ul {
     font-family: var(--font_main);
     display: flex;
-    height: 50px;
+    height: 40px;
     margin: auto;
     align-items: center;
     justify-content: center;
@@ -158,7 +158,7 @@ body {
 }
 .home__texto strong{
     color: var(--Cor-azul);
-    font-weight: 940px;
+    font-weight: 940;
 }
 
 .content p{
@@ -204,7 +204,7 @@ a:hover {
 .titulo{
     color: var(--branco);
     margin-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
     text-align: center;
     font-weight:100;
     font-size: 2rem;
@@ -254,10 +254,10 @@ a:hover {
     border: 2px solid var(--Cor-azul);
     display:flex;
     flex-direction:column;
-    width: 100%;
+    
     color: #000;
     border:solid ;
-    
+    width: 100%;
     align-items: center;
     justify-content: center;
     
@@ -269,7 +269,7 @@ a:hover {
     background-color: var(--branco);
     display: flex;
     flex-direction: column;
-    max-width: 948px;
+    max-width: 950px;
     margin: auto;
     margin: 4.4rem;
     align-items: center;
@@ -281,7 +281,7 @@ a:hover {
     margin:auto;
     justify-content: center;
     align-items: center;
-   
+    
     gap: 30px;
     
     
@@ -401,32 +401,39 @@ a:hover {
 
 
 .skills  {
-    margin: 5rem 2rem;
+    margin: 5rem rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--Cor-azul);
     
 } 
 .skills .hability {
-    padding-top:  4rem;
+    margin-top:  4rem;
     display: flex;
     align-items: center;
     justify-content: center;
     
     font-size: 5rem;
-    color: var(--Cor-azul);
+    color: var(--font_main);
     
 }
 .skills .hability div{
+    background-color: var(--Cor-azul);
     padding: 10px;
     margin:auto ;
+    
 }
 
 .footer {
     padding-top: 4rem;
     text-align: center;
     
+    
+}
+footer .titulo{
+    margin-top: 0rem;
 }
 
 .footer__social-medias {
@@ -436,6 +443,7 @@ a:hover {
     padding: 30px;
     gap: 60px;
     font-size: 3rem;
+    padding-top: -10px;
 }
 
 
@@ -552,7 +560,7 @@ a:hover {
         flex-direction: column;
         background-color: blue;
         position: absolute;
-       -
+       
         
     }
     .projects__list {
